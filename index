@@ -1,22 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Girasoles Animados</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        #mensaje {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        #girasol {
+            display: none;
+            width: 100px;
+            height: 100px;
+            transition: all 0.5s ease-in-out;
+        }
+
+        #boton {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <div class="sunflower">
-        <div class="sunflower-center"></div>
-        <div class="petal"></div>
-        <div class="petal"></div>
-        <div class="petal"></div>
-        <div class="petal"></div>
-        <div class="petal"></div>
-        <div class="petal"></div>
-        <div class="petal"></div>
-        <div class="petal"></div>
+    <div>
+        <p id="mensaje">Me gustas nenita ♥</p>
+        <img id="girasol" src="https://i.imgur.com/nGBr2.gif" alt="Girasol animado">
+        <button id="boton" onclick="mostrarGirasol()">Hazme clic</button>
     </div>
+
+    <script>
+        function mostrarGirasol() {
+            var girasol = document.getElementById('girasol');
+            girasol.style.display = 'block';
+        }
+    </script>
 </body>
 </html>
